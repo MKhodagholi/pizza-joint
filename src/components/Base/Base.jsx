@@ -17,9 +17,14 @@ const Base = ({ pizza, addBase }) => {
         {bases.map((base, index) => {
           let spanClass = pizza.base === base ? "active" : "";
           return (
-            <li key={index} onClick={() => addBase(base)}>
+            <motion.li
+              key={index}
+              onClick={() => addBase(base)}
+              whileHover={{ scale: 1.5, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <span className={spanClass}>{base}</span>
-            </li>
+            </motion.li>
           );
         })}
       </ul>
