@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Base from "./components/Base/Base";
 import { Switch, Route } from "react-router-dom";
 import Toppings from "./components/Toppings/Toppings";
+import Order from "./components/Order/Order";
 
 const App = () => {
   const [pizza, setPizza] = useState({
@@ -42,6 +43,9 @@ const App = () => {
         </Route>
         <Route path="/toppings">
           <Toppings pizza={pizza} addToppings={addToppings} />
+        </Route>
+        <Route>
+          <Order pizza={pizza} />
         </Route>
       </Switch>
     </div>

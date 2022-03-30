@@ -3,6 +3,7 @@
 @import "./components/Header/Header.scss";
 @import "./components/Base/Base.scss";
 @import "./components/Toppings/Toppings.scss";
+@import "./components/Order/Order.scss";
 
 @font-face {
   font-family: "Quicksand";
@@ -23,12 +24,14 @@ body {
   background: $BG_COLOR;
   color: $COLOR;
   font-family: $MAIN_FONT;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 300px;
   margin: auto;
   margin-top: 7rem;
+  margin-bottom: 4rem;
 }
 
 .container {
