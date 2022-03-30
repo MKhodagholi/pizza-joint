@@ -1,0 +1,14 @@
+.home {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  button {
+    @extend %defBtn;
+  }
+}
+
+.home.container {
+  max-width: 800px;
+  text-align: center;
+}
