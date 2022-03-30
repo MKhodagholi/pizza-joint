@@ -2,6 +2,7 @@ import React from "react";
 
 import { toppings } from "../../store";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Toppings = ({ addToppings, pizza }) => {
   return (
@@ -19,7 +20,15 @@ const Toppings = ({ addToppings, pizza }) => {
       </ul>
       <div className="next">
         <Link to="/order">
-          <button>Order</button>
+          <motion.button
+            whileHover={{
+              scale: 1.1,
+              textShadow: "0 0 4px #fff",
+              boxShadow: "0 0 4px #fff",
+            }}
+          >
+            Order
+          </motion.button>
         </Link>
       </div>
     </div>
