@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./components/Home/Home.scss";
+@import "./components/Header/Header.scss";
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./asset/font/Quicksand-Light.woff") format("woff"),
+    url("./asset/font/Quicksand-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: $BG_COLOR;
+  color: $COLOR;
+  font-family: $MAIN_FONT;
+}
