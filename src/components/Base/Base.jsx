@@ -4,15 +4,15 @@ import { bases } from "../../store";
 import { Link } from "react-router-dom";
 
 const Base = ({ pizza, addBase }) => {
-  console.log(pizza);
+  
   return (
     <div className="base container">
       <h3>Step 1: Choose Your Base</h3>
       <ul>
-        {bases.map((base) => {
+        {bases.map((base, index) => {
           let spanClass = pizza.base === base ? "active" : "";
           return (
-            <li onClick={() => addBase(base)}>
+            <li key={index} onClick={() => addBase(base)}>
               <span className={spanClass}>{base}</span>
             </li>
           );
