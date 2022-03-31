@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariant = {
   hidden: {
@@ -36,11 +36,6 @@ const childVariant = {
 };
 
 const Order = ({ pizza }) => {
-  const [showTitle, setShowTitle] = useState(true);
-  setTimeout(() => {
-    setShowTitle(false);
-  }, 4000);
-
   return (
     <motion.div
       className="container order"
