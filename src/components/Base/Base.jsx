@@ -4,13 +4,41 @@ import { bases } from "../../store";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      delay: 0.5,
+    },
+  },
+};
+
+const nextVariant = {
+  hidden: {
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      type: "spring",
+      stifness: 120,
+    },
+  },
+};
+
 const Base = ({ pizza, addBase }) => {
   return (
     <motion.div
       className="base container"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ duration: 1, type: "spring", stiffness: 120 }}
+      variants={containerVariant}
+      initial="hidden"
+      animate="visible"
     >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
@@ -29,12 +57,7 @@ const Base = ({ pizza, addBase }) => {
         })}
       </ul>
       {pizza.base && (
-        <motion.div
-          className="next"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 120, duration: 1 }}
-        >
+        <motion.div className="next" variants={nextVariant}>
           <Link to="/toppings">
             <motion.button
               initial={{ x: "100%" }}

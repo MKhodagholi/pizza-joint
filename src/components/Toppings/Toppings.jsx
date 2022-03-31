@@ -4,9 +4,29 @@ import { toppings } from "../../store";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      delay: 0.5,
+    },
+  },
+};
+
 const Toppings = ({ addToppings, pizza }) => {
   return (
-    <div className="toppings container">
+    <motion.div
+      className="toppings container"
+      variants={containerVariant}
+      initial="hidden"
+      animate="visible"
+    >
       <h3>Step 2: Choose Toppings</h3>
       <ul>
         {toppings.map((topping, index) => {
@@ -36,7 +56,7 @@ const Toppings = ({ addToppings, pizza }) => {
           </motion.button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
