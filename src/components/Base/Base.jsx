@@ -32,6 +32,18 @@ const nextVariant = {
   },
 };
 
+const buttonVariant = {
+  hover: {
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255, 255, 255)",
+    boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+    transition: {
+      duration: 0.3,
+      yoyo: Infinity,
+    },
+  },
+};
+
 const Base = ({ pizza, addBase }) => {
   return (
     <motion.div
@@ -59,15 +71,7 @@ const Base = ({ pizza, addBase }) => {
       {pizza.base && (
         <motion.div className="next" variants={nextVariant}>
           <Link to="/toppings">
-            <motion.button
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              whileHover={{
-                scale: 1.1,
-                textShadow: "0 0 4px #fff",
-                boxShadow: "0 0 4px #fff",
-              }}
-            >
+            <motion.button variants={buttonVariant} whileHover="hover">
               Next
             </motion.button>
           </Link>
