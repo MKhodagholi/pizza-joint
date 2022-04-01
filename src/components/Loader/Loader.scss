@@ -1,0 +1,21 @@
+.loader {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.change-loader {
+  outline: none;
+  border: none;
+  margin: 10px auto;
+  margin-top: 40px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  cursor: pointer;
+}

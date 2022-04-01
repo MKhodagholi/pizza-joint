@@ -11,6 +11,7 @@ import Order from "./components/Order/Order";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Modal from "./components/Modal/Modal";
+import Loader from "./components/Loader/Loader";
 
 const App = () => {
   const location = useLocation();
