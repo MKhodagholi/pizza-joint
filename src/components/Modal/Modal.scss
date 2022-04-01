@@ -8,14 +8,14 @@
   z-index: 1;
 
   .modal {
-    max-width: 400px;
+    width: 70%;
     background-color: #1b1b1b;
     padding: 2rem 1rem;
     margin: 0 auto;
     margin-top: 4rem;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     box-shadow: 0 0 4px #fff;
     button {
       margin-top: 1rem;
@@ -23,7 +23,7 @@
       outline: none;
       border: 1px solid #fff;
       padding: 1rem 2rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       cursor: pointer;
       border-radius: 5px;
       font-weight: bold;
@@ -31,6 +31,15 @@
     }
     p {
       color: #fff;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .modal {
+      max-width: 400px;
+      font-size: 1.5rem;
+      button {
+        font-size: 1.5rem;
+      }
     }
   }
 }
